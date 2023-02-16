@@ -1,0 +1,59 @@
+.flexContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 250px;
+    background-color: rgb(73, 94, 87, 100);
+    justify-content: center;
+    color: white;
+    padding: 5px;
+  }
+
+.flexContainer > div {
+    margin: 10px;
+    text-align: center;
+    /* background-color: #cc2062; */
+    width: 300px;
+    height: 300px;
+  }
+
+.image {
+    width: 230px;
+    height: 230px;
+    border-radius: 15px;
+}
+
+.title {
+  color: rgb(244, 206, 20, 100);
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 2.0rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subTitle {
+  color: white;
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 1.0rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.blankLine {
+  height: 30px;
+}
+
+.desc {
+  color: white;
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 1.0rem;
+  text-align: left;
+}
+
+.buttons {
+  width: 170px;
+  height: 30px;
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(244, 206, 20, 100);
+}

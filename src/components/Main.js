@@ -1,9 +1,7 @@
-import React from "react";
-
 function Main() {
     return (
         <>
-        <main>This is main</main>
+            <main>This is main</main>
         </>
     );
 };

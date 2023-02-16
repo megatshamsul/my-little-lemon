@@ -1,18 +1,24 @@
-import React from "react";
+import { Link } from 'react-router-dom';
+import classes from './../css/Nav.module.css';
+import logoImg from './../assets/little-lemon-logo.jpg';
 
 function Nav() {
     return (
-        <>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Menu</li>
-                <li>Reservations</li>
-                <li>Order Online</li>
-                <li>Login</li>
-            </ul>
-        </nav>
-        </>
+        <header className={classes.header}>
+            <div className={classes.flexContainer}>
+                <div>
+                    <Link to='/'>
+                        <img src={logoImg} alt="Logo" title="Little Lemon Restaurant logo"></img>
+                    </Link>
+                </div>
+                <div><Link to='/'>Home</Link></div>
+                <div><Link to='/about'>About</Link></div>
+                <div><Link to='/menu'>Menu</Link></div>
+                <div><Link to='/reservations'>Reservations</Link></div>
+                <div><Link to='/order'>Order Online</Link></div>
+                <div><Link to='/login'>Login</Link></div>
+            </div>
+        </header>
     );
 };
 

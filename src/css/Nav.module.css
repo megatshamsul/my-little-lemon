@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 1.0rem;
+  /* color: #fcb8d2; */
+  color: black;
+  font-family: 'Markazi Text', sans-serif;
+}
+
+.header a:hover,
+.header a.active {
+  color: #F4CE14;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  /* background-color: dodgerblue; */
+  justify-content: center;
+  padding: 5px;
+}
+
+.flexContainer > div {
+  margin: 10px;
+  text-align: center;
+  /* background-color: #cc2062; */
+  margin-top: auto;
+  margin-bottom: auto;
+}

@@ -1,4 +1,3 @@
-import React from "react";
 import Nav from "./Nav";
 import logo from "./../assets/little-lemon-logo.jpg";
 
