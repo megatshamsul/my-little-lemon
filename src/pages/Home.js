@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import classes from './../css/Home.module.css';
+import TestimonialsPage from './Testimonials';
 import specialsImg1 from './../assets/greek salad.jpg';
 import specialsImg2 from './../assets/Bruchetta.jpg';
 import specialsImg3 from './../assets/lemon dessert.jpg';
@@ -69,6 +70,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <TestimonialsPage />
         </>
     );
 };

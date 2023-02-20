@@ -1,7 +1,7 @@
 function Order() {
     return (
         <>
-        This is Order
+            This is Order
         </>
     );
 };

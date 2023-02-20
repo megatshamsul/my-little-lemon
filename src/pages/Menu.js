@@ -1,7 +1,7 @@
 function Menu() {
     return (
         <>
-        This is Menu
+            This is Menu
         </>
     );
 };

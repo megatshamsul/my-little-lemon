@@ -1,7 +1,7 @@
 function Reservations() {
     return (
         <>
-        This is Reservations
+            This is Reservations
         </>
     );
 };

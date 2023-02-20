@@ -1,0 +1,24 @@
+.flexContainer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+    grid-template-rows: 40px;
+    grid-template-columns: 600px;
+    padding: 20px;
+    justify-content: center;
+    background-color: white;
+}
+
+ .pageText {
+    padding: 5px;
+    /* border: 1px solid black; */
+    /* background-color: green; */
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.blankLine {
+    height: 10px;
+}
