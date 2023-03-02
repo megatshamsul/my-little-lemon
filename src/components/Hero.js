@@ -14,7 +14,7 @@ function Hero() {
                         We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </div>
                     <div className={classes.blankLine}></div>
-                    <div>
+                    <div className={classes.buttonsLine}>
                         <Link to='/reservations'>
                             <button className={classes.buttons}>Reserve a Table</button>
                         </Link>

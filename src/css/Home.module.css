@@ -27,16 +27,6 @@
     padding: 2px;
 }
 
-.specialsText {
-    padding: 5px;
-    /* border: 1px solid black; */
-    /* background-color: green; */
-    font-family: 'Markazi Text', sans-serif;
-    font-size: 2.0rem;
-    font-weight: bold;
-    text-align: left;
-}
-
 .buttons {
     width: 170px;
     height: 30px;

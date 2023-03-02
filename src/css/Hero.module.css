@@ -21,6 +21,7 @@
     width: 230px;
     height: 275px;
     border-radius: 15px;
+    border: 1px solid #000;
 }
 
 .title {
@@ -56,4 +57,8 @@
   border-radius: 15px;
   color: white;
   background-color: rgb(244, 206, 20, 100);
+}
+
+.buttonsLine {
+  float: left;
 }

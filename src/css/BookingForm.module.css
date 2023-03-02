@@ -1,0 +1,41 @@
+.bookingForm {
+    display: grid;
+    /* max-width: 400px; */
+    gap: 10px;
+    justify-content: left;
+    text-align: left;
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 1.0rem;
+}
+
+.bookingFields {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 150px 250px;
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 1.0rem;
+}
+
+.buttons {
+    width: 170px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(244, 206, 20, 100);
+}
+
+.blankLine {
+    height: 10px;
+}
+
+select {
+    width: 150px;
+}
+
+input[type=number]{
+    width: 142px;
+}
+
+input[type=date] {
+    width: 145px;
+}
