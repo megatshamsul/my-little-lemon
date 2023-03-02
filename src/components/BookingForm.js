@@ -14,17 +14,19 @@ function BookingForm(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const enteredResDate= resDateRef.current.value;
-        const enteredResTime = resTimeRef.current.value;
-        const enteredResGuests = resGuestsRef.current.value;
-        const enteredResOccasion = resOccasionRef.current.value;
-        const submitData = {
-            resDate: enteredResDate,
-            resTime: enteredResTime,
-            resGuests: enteredResGuests,
-            resOccasion: enteredResOccasion,
-          };
-        props.onSubmit({submitData});
+        if (window.confirm("Are you sure to submit this reservation?")) {
+            const enteredResDate= resDateRef.current.value;
+            const enteredResTime = resTimeRef.current.value;
+            const enteredResGuests = resGuestsRef.current.value;
+            const enteredResOccasion = resOccasionRef.current.value;
+            const submitData = {
+                resDate: enteredResDate,
+                resTime: enteredResTime,
+                resGuests: enteredResGuests,
+                resOccasion: enteredResOccasion,
+            };
+            props.onSubmit({submitData},{enteredResTime});
+        }
     }
 
     function handleChangeResDate(event) {

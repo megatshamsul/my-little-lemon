@@ -9,7 +9,6 @@ test('Renders the BookingForm heading', () => {
   expect(headingElement).toBeInTheDocument();
 }); */
 
-/*
 test('BookingForm is disabled due to missing mandatory fields', () => {
   let availableTimes = [
       { value: "17:00" },
@@ -22,22 +21,28 @@ test('BookingForm is disabled due to missing mandatory fields', () => {
   const resDate = "23/02/2023";
   const resTime = "18:00";
   const resGuests = "";
-  const resOccasion = "Anniversary";
+  const resOccasion = "Birthday";
   const handleSubmit = jest.fn();
   render(<BookingForm availableTimes={availableTimes} onSubmit={handleSubmit} />);
+
   const resDateInput = screen.getByLabelText("Choose date");
   fireEvent.change(resDateInput, {target: {value: resDate}});
+
   const resTimeInput = screen.getByLabelText("Choose time");
   fireEvent.change(resTimeInput, {target: {value: resTime}});
+
   const resGuestsInput = screen.getByLabelText("Number of guests");
   fireEvent.change(resGuestsInput, {target: {value: resGuests}});
+
   const resOccasionInput = screen.getByLabelText("Occasion");
   fireEvent.change(resOccasionInput, {target: {value: resOccasion}});
+
   const submitButton = screen.getByRole("button");
   fireEvent.click(submitButton);
+
   expect(handleSubmit).not.toHaveBeenCalled();
   expect(submitButton).toHaveAttribute("disabled");
-}); */
+});
 
 /*
 test('Confirm the default value & total options of reservation times', () => {
@@ -48,6 +53,8 @@ test('Confirm the default value & total options of reservation times', () => {
   expect(optionsresTime).toHaveLength(7); //7 including ""
 }); */
 
+/*
+//pending: 
 test('Reservation times updated based on changed reservation date', () => {
   render(<Reservations />);
   const resDateInput = screen.getByLabelText("Choose date");
@@ -55,3 +62,4 @@ test('Reservation times updated based on changed reservation date', () => {
   let optionsresTime = screen.getAllByTestId("options-resTime");
   expect(optionsresTime).toHaveLength(8); //8 including ""
 });
+*/

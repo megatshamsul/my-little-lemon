@@ -23,18 +23,20 @@ function Reservations() {
     let selResDate = (new Date()).toISOString().split('T')[0];
     const [ifSubmit, setIfSubmit] = useState(false);
     const [refNo, setRefNo] = useState("");
+    const [resTime, setResTime] = useState("");
 
     const reIntializeTimes = (selResDate) => {
         updatedTimes = (window['fetchLocalAPI'](selResDate)).map(value => ({value})); //convert array to array of objects
         dispatch(updatedTimes);
     }
 
-    const handleSubmit = (submitData) => {
-        console.log(submitData);
+    const handleSubmit = (submitData, selResTime) => {
+        //console.log(submitData);
         if (window['submitLocalAPI'](submitData)) {
             setIfSubmit(true);
             let num = Math.floor((Math.random() * 10000) + 1);    //random number between 0 & 10000
             setRefNo(num.toString().padStart(5, '0'));  //pad '0' for 5 chars
+            setResTime(selResTime.enteredResTime);
         }
         else
             alert("Error submitting the form!");
@@ -63,7 +65,7 @@ function Reservations() {
                     {!ifSubmit ? 
                         <BookingForm availableTimes={times} selectedResDate={selectResDate} onSubmit={handleSubmit} />
                         : 
-                        <ConfirmedBooking selectedDate={selResDate} refNo={refNo} />
+                        <ConfirmedBooking selectedDate={selResDate} selectedTime={resTime} refNo={refNo} />
                     }
                 </div>
             </div>
