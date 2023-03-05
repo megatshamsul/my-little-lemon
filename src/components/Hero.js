@@ -5,23 +5,23 @@ import foodImg from './../assets/restauranfood.jpg';
 function Hero() {
     return (
         <>
-            <div className={classes.flexContainer}>
+            <div className={classes.flexContainer} aria-label="hero-section">
                 <div>
-                    <div className={classes.title}>Little Lemon</div>
-                    <div className={classes.subTitle}>Chicago</div>
+                    <div className={classes.title} aria-label="little-lemon">Little Lemon</div>
+                    <div className={classes.subTitle} aria-label="chicago">Chicago</div>
                     <div className={classes.blankLine}></div>
-                    <div className={classes.desc}>
+                    <div className={classes.desc} aria-label="little-lemon-description">
                         We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </div>
                     <div className={classes.blankLine}></div>
-                    <div className={classes.buttonsLine}>
+                    <div className={classes.buttonsLine} aria-label="link-to-reservations">
                         <Link to='/reservations'>
-                            <button className={classes.buttons}>Reserve a Table</button>
+                            <button className={classes.buttons} aria-label="Click to reserve a table">Reserve a Table</button>
                         </Link>
                     </div>
                 </div>
                 <div>
-                    <img src={foodImg} alt="Foods" title="Little Lemon Restaurant foods" className={classes.image}></img>
+                    <img src={foodImg} alt="Foods" title="Little Lemon Restaurant foods" className={classes.image} aria-label="little-lemon-restaurant"></img>
                 </div>
             </div>
         </>

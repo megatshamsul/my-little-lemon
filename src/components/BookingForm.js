@@ -17,15 +17,22 @@ function BookingForm(props) {
         if (window.confirm("Are you sure to submit this reservation?")) {
             const enteredResDate= resDateRef.current.value;
             const enteredResTime = resTimeRef.current.value;
+            let currDate = new Date();
+            let selDate = new Date(enteredResDate + " " + enteredResTime);
             const enteredResGuests = resGuestsRef.current.value;
             const enteredResOccasion = resOccasionRef.current.value;
-            const submitData = {
-                resDate: enteredResDate,
-                resTime: enteredResTime,
-                resGuests: enteredResGuests,
-                resOccasion: enteredResOccasion,
-            };
-            props.onSubmit({submitData},{enteredResTime});
+            if (selDate > currDate) {
+                const submitData = {
+                    resDate: enteredResDate,
+                    resTime: enteredResTime,
+                    resGuests: enteredResGuests,
+                    resOccasion: enteredResOccasion,
+                };
+                props.onSubmit({submitData});
+            }
+            else {
+                alert("Please select future date for reservations.")
+            }
         }
     }
 
@@ -37,24 +44,24 @@ function BookingForm(props) {
     return (
         <>
             <form className={classes.bookingForm} onSubmit={handleSubmit}>
-                <div className={classes.bookingFields}>
-                    <div>
-                        <label htmlFor="resDate">Choose date</label>
+                <div className={classes.bookingFields} aria-label="choose-date-section">
+                    <div aria-label="label-choose-date">
+                        <label htmlFor="resDate" aria-label="label-choose-date">Choose date</label>
                         <span>*</span>
                     </div>
-                    <div>
+                    <div aria-label="input-choose-date">
                         <input type="date" id="resDate" required 
                             onChange={handleChangeResDate} 
                             ref={resDateRef} 
                             aria-label="Select reservation date" aria-required="true" />
                     </div>
                 </div>
-                <div className={classes.bookingFields}>
-                    <div>
-                        <label htmlFor="resTime">Choose time</label>
+                <div className={classes.bookingFields} aria-label="choose-time-section">
+                    <div aria-label="label-choose-time">
+                        <label htmlFor="resTime" aria-label="label-choose-time">Choose time</label>
                         <span>*</span>
                     </div>
-                    <div>
+                    <div aria-label="input-choose-time">
                         <select id="resTime" required 
                             onChange={event => setResTime(event.target.value)} 
                             ref={resTimeRef} 
@@ -65,24 +72,24 @@ function BookingForm(props) {
                         </select>
                     </div>
                 </div>
-                <div className={classes.bookingFields}>
-                    <div>
-                        <label htmlFor="resGuests">Number of guests</label>
+                <div className={classes.bookingFields} aria-label="number-of-guests-section">
+                    <div aria-label="label-num-of-guests">
+                        <label htmlFor="resGuests" aria-label="label-num-of-guests">Number of guests</label>
                         <span>*</span>
                     </div>
-                    <div>
+                    <div aria-label="input-num-of-guests">
                         <input type="number" min="1" max="10" id="resGuests" required 
                             onChange={event => setResGuests(event.target.value)} 
                             ref={resGuestsRef} 
                             aria-label="Select number of guests" aria-required="true" />
                     </div>
                 </div>
-                <div className={classes.bookingFields}>
-                    <div>
-                        <label htmlFor="resOccasion">Occasion</label>
+                <div className={classes.bookingFields} aria-label="choose-occasion-section">
+                    <div aria-label="label-occasion">
+                        <label htmlFor="resOccasion" aria-label="label-occasion">Occasion</label>
                         <span>*</span>
                     </div>
-                    <div>
+                    <div aria-label="input-occasion">
                         <select id="resOccasion" required 
                             onChange={event => setResOccasion(event.target.value)} 
                             ref={resOccasionRef} 
@@ -94,7 +101,7 @@ function BookingForm(props) {
                     </div>
                 </div>
                 <div className={classes.blankLine}></div>
-                <div>
+                <div aria-label="submit-button-section">
                     <button type="submit" className={classes.buttons} 
                         aria-label="Click to submit your reservation" 
                         disabled={isDisabled}>Make Your Reservation</button>
